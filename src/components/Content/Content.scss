@@ -1,0 +1,49 @@
+@use "sass:color";
+@use "../../styles/settings" as *;
+
+.content{
+   width: 100%;
+   min-height: 100vh;
+height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  //background: url("../../assets/bg/bg.png") no-repeat center / cover;
+  background-attachment: fixed;
+  padding: 40px 0;
+  box-sizing: border-box; 
+  
+}
+.container{
+    width: 50%;
+    height: auto;
+    
+    padding: 20px 0px 20px;
+    background-color: #191919;
+    border-radius: 10px;
+    border:1px solid color.adjust(white, $lightness: -80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: color.scale(white, $lightness: -70%);
+
+    @media screen and (max-width:1024px) {
+        width: 70%;
+    }
+     @media screen and (max-width:425px) {
+        width: 80%;
+    }
+
+}
+
+.container-card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+
+     
+}

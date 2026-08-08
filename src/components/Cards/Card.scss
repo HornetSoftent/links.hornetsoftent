@@ -1,0 +1,112 @@
+@use "sass:color";
+@use "../../styles/settings" as *;
+
+.card{
+    background-color: color.scale(black, $lightness: 9%);
+    border:1px solid color.adjust(white, $lightness: -80%);
+    border-radius: 20px;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    gap: 50px;
+    @include centerElement; 
+
+      @media screen and (max-width:955px) {
+        gap: 30px;
+    }
+    @media screen and (max-width:955px) {
+        gap: 20px;
+        height: 110px;
+    }
+     @media screen and (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+      padding: 30px;
+        align-items: flex-start;
+       
+        
+    }
+    @media screen and (max-width:550px) {
+        @include centerElement;
+        flex-direction: column;
+        height: auto;
+      padding: 30px;
+      
+       text-align: center;
+      
+       
+        
+    }
+    .logo-app{
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+
+        }
+    }
+    .info-app{
+       display: flex;
+            flex-direction: column;
+            gap: 5px;
+        width: 45%;
+        color: color.scale(white, $lightness: -60%);
+        @media screen and (max-width:768px){
+            
+            width: 100%;
+         }
+
+ @media screen and (max-width:550px){
+            
+            gap: 10px;
+         }
+
+         h2{
+            font-size: 1.1rem;
+            font-weight: 500;
+             color: color.scale(white, $lightness: -50%);
+        }
+        p{
+            font-size: 0.9rem;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+         @media screen and (max-width:768px) {
+        flex-direction: row;
+    }
+    @media screen and (max-width:330px) {
+        flex-direction: column;
+        width: 100%;
+    }
+        .button-store{
+            
+            background-color: color.scale(black, $lightness: 7%);
+            border:1px solid color.adjust(white, $lightness: -80%);
+            text-align: center;
+            padding: 9px 20px;
+            border-radius: 7px;
+            color: color.scale(white, $lightness: -60%);
+            text-decoration: none;
+
+             @media screen and (max-width:491px){
+            font-size: 0.8rem;
+            padding: 9px 15px;
+         }
+           @media screen and (max-width:410px){
+            padding: 9px 10px;
+         }
+         @media screen and (max-width:330px) {
+        max-width: 100% !important;
+    }
+        }
+    }
+}
